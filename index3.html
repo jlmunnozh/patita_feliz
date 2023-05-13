@@ -13,7 +13,9 @@
         let userprompt = prompt('Usuario (ingresar el nombre joseluis)');
         let passpromt;
 
-        if(userprompt == user){
+        let usercorregido = userprompt.toLowerCase();
+        
+        if(usercorregido == user){
             alert('Bienvenido '+user);
         }else{
             alert('Usuario NO registrado, ¡SALIR DEL SISTEMA, POR FAVOR!');
