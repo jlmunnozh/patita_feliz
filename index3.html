@@ -6,23 +6,37 @@
     <title>Usuario_Contraseña</title>
 </head>
 <body>
+    <h1>Joseluis Muñoz</h1>
     <script>
         let user = 'joseluis';
         let password = '123456';
 
-        let userprompt = prompt('Usuario (ingresar el nombre joseluis)');
-        let passpromt;
+        alert('sistema que valida su usuario y 3 intentos de contraseña');
 
+        let userprompt = prompt('Usuario (ingresar el nombre joseluis)');
         let usercorregido = userprompt.toLowerCase();
         
         if(usercorregido == user){
-            alert('Bienvenido '+user);
+            n1 = 0; a1 = 3; b1 = 3;
+            while(n1<a1){
+                let passpromt = prompt('Contraseña (ingresar 123456), recuerde solo tiene '+b1+ ' intentos');
+                if(passpromt == password){
+                    alert('Bienvenido '+user);
+                    exit;                    
+                }else{
+                    n1 ++;
+                    b1 = a1-n1;
+                    if(b1==0){
+                        alert('Se acabaron sus intentos');                        
+                    }else{
+                        alert('Contraseña invalida, solo tiene '+ b1 + ' intento mas');
+                    }
+                }
+            }
+            alert('Usuario NO registrado, ¡SALIR DEL SISTEMA, POR FAVOR!');
         }else{
             alert('Usuario NO registrado, ¡SALIR DEL SISTEMA, POR FAVOR!');
         }
-
-
-
     </script>    
 </body>
 </html>
